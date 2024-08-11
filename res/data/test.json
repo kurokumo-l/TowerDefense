@@ -1,0 +1,9 @@
+{
+    "name": "xiaoming",
+    "age": 32,
+    "pets": [
+        "dog",
+        "cat",
+        "bird"
+    ]
+}
