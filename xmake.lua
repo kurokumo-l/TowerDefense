@@ -1,11 +1,14 @@
 add_rules("mode.debug", "mode.release")
 
 set_toolchains("msvc")
+set_languages("cxx23")
+
 target("TowerDefense")
     set_kind("binary")
 
     add_includedirs(
         "include", 
+        "include/Manager",
         "dep/cJSON/include",
         "dep/SDL2/include", 
         "dep/SDL2_gfx/include",
@@ -14,7 +17,7 @@ target("TowerDefense")
         "dep/SDL2_ttf/include"
     )
 
-    add_files("src/*.cpp", "dep/cJSON/src/*.c")
+    add_files("src/*.cpp", "src/Manager/*.cpp", "dep/cJSON/src/*.c")
 
     add_ldflags("/subsystem:console")
     add_cxflags("/utf-8")
